@@ -9,7 +9,7 @@ Summary:	Serialize all of Python
 Summary(pl.UTF-8):	Serializacja całości Pythona
 Name:		python-dill
 Version:	0.3.3
-Release:	3
+Release:	4
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/dill/

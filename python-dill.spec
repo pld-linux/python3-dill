@@ -8,25 +8,24 @@
 Summary:	Serialize all of Python
 Summary(pl.UTF-8):	Serializacja całości Pythona
 Name:		python-dill
-Version:	0.3.3
-Release:	5
+Version:	0.3.5.1
+Release:	1
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/dill/
-Source0:	https://files.pythonhosted.org/packages/source/d/dill/dill-%{version}.zip
-# Source0-md5:	99c878e2e4e924f3234c0efcbcff6abf
+Source0:	https://files.pythonhosted.org/packages/source/d/dill/dill-%{version}.tar.gz
+# Source0-md5:	3f8757f3aaa394efa67764624ab87cfd
 URL:		https://pypi.org/project/dill/
 %if %{with python2}
 BuildRequires:	python-modules >= 1:2.7
 BuildRequires:	python-setuptools
 %endif
 %if %{with python3}
-BuildRequires:	python3-modules >= 1:3.5
+BuildRequires:	python3-modules >= 1:3.7
 BuildRequires:	python3-setuptools
 %endif
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
-BuildRequires:	unzip
 %if %{with doc}
 BuildRequires:	sphinx-pdg
 %endif
@@ -52,7 +51,7 @@ powrotem do hierarchii obiektów Pythona.
 Summary:	Serialize all of Python
 Summary(pl.UTF-8):	Serializacja całości Pythona
 Group:		Libraries/Python
-Requires:	python3-modules >= 1:3.5
+Requires:	python3-modules >= 1:3.7
 
 %description -n python3-dill
 dill extends Python's pickle module for serializing and de-serializing
@@ -133,7 +132,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with python2}
 %files
 %defattr(644,root,root,755)
-%doc DEV_NOTES LICENSE README.md
+%doc LICENSE README.md
 %attr(755,root,root) %{_bindir}/get_objgraph-2
 %attr(755,root,root) %{_bindir}/undill-2
 %{py_sitescriptdir}/dill
@@ -143,7 +142,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with python3}
 %files -n python3-dill
 %defattr(644,root,root,755)
-%doc DEV_NOTES LICENSE README.md
+%doc LICENSE README.md
 %attr(755,root,root) %{_bindir}/get_objgraph-3
 %attr(755,root,root) %{_bindir}/undill-3
 %{py3_sitescriptdir}/dill

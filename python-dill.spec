@@ -10,7 +10,7 @@ Summary(pl.UTF-8):	Serializacja całości Pythona
 Name:		python-dill
 # keep 0.3.5.x here for python2 support
 Version:	0.3.5.1
-Release:	2
+Release:	3
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/dill/

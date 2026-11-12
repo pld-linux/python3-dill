@@ -6,22 +6,22 @@
 Summary:	Serialize all of Python
 Summary(pl.UTF-8):	Serializacja całości Pythona
 Name:		python3-dill
-Version:	0.4.0
+Version:	0.4.1
 Release:	1
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/dill/
 Source0:	https://files.pythonhosted.org/packages/source/d/dill/dill-%{version}.tar.gz
-# Source0-md5:	0a51421ca17dcedddd54e3a2e79f8d29
+# Source0-md5:	599349a2723bf2dccf7ad4adae771142
 URL:		https://pypi.org/project/dill/
-BuildRequires:	python3-modules >= 1:3.8
+BuildRequires:	python3-modules >= 1:3.9
 BuildRequires:	python3-setuptools >= 1:42
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with doc}
 BuildRequires:	sphinx-pdg-3 >= 1.0
 %endif
-Requires:	python3-modules >= 1:3.8
+Requires:	python3-modules >= 1:3.9
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -58,7 +58,7 @@ Dokumentacja API modułu Pythona dill.
 
 %if %{with tests}
 PYTHONPATH=$(pwd) \
-%{__python3} tests/__main__.py
+%{__python3} dill/tests/__main__.py
 %endif
 
 %if %{with doc}
